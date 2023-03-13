@@ -1,6 +1,6 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "6aa6ba44282958fb31db80504ecb8b4d",
+    "revision": "f2c459bddeb72b395e6b54228fe29f2e",
     "url": "/vinlotteri/index.html"
   },
   {
