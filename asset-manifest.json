@@ -1,14 +1,14 @@
 {
   "files": {
     "main.css": "/vinlotteri/static/css/main.0dbd2469.chunk.css",
-    "main.js": "/vinlotteri/static/js/main.bbc7db2a.chunk.js",
-    "main.js.map": "/vinlotteri/static/js/main.bbc7db2a.chunk.js.map",
+    "main.js": "/vinlotteri/static/js/main.cf6e8a81.chunk.js",
+    "main.js.map": "/vinlotteri/static/js/main.cf6e8a81.chunk.js.map",
     "runtime-main.js": "/vinlotteri/static/js/runtime-main.cb3ce035.js",
     "runtime-main.js.map": "/vinlotteri/static/js/runtime-main.cb3ce035.js.map",
     "static/js/2.f88f1ece.chunk.js": "/vinlotteri/static/js/2.f88f1ece.chunk.js",
     "static/js/2.f88f1ece.chunk.js.map": "/vinlotteri/static/js/2.f88f1ece.chunk.js.map",
     "index.html": "/vinlotteri/index.html",
-    "precache-manifest.6ae7266595343e7d4d4db8f3a8a0ffdc.js": "/vinlotteri/precache-manifest.6ae7266595343e7d4d4db8f3a8a0ffdc.js",
+    "precache-manifest.e7fb5a8f0019e23a8659caf573bc90bf.js": "/vinlotteri/precache-manifest.e7fb5a8f0019e23a8659caf573bc90bf.js",
     "service-worker.js": "/vinlotteri/service-worker.js",
     "static/css/main.0dbd2469.chunk.css.map": "/vinlotteri/static/css/main.0dbd2469.chunk.css.map",
     "static/js/2.f88f1ece.chunk.js.LICENSE.txt": "/vinlotteri/static/js/2.f88f1ece.chunk.js.LICENSE.txt",
@@ -19,6 +19,6 @@
     "static/js/runtime-main.cb3ce035.js",
     "static/js/2.f88f1ece.chunk.js",
     "static/css/main.0dbd2469.chunk.css",
-    "static/js/main.bbc7db2a.chunk.js"
+    "static/js/main.cf6e8a81.chunk.js"
   ]
 }
