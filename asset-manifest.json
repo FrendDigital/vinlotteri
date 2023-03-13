@@ -1,0 +1,24 @@
+{
+  "files": {
+    "main.css": "/vinlotteri/static/css/main.821be1c2.chunk.css",
+    "main.js": "/vinlotteri/static/js/main.6f670815.chunk.js",
+    "main.js.map": "/vinlotteri/static/js/main.6f670815.chunk.js.map",
+    "runtime-main.js": "/vinlotteri/static/js/runtime-main.cb3ce035.js",
+    "runtime-main.js.map": "/vinlotteri/static/js/runtime-main.cb3ce035.js.map",
+    "static/js/2.58f5a0db.chunk.js": "/vinlotteri/static/js/2.58f5a0db.chunk.js",
+    "static/js/2.58f5a0db.chunk.js.map": "/vinlotteri/static/js/2.58f5a0db.chunk.js.map",
+    "index.html": "/vinlotteri/index.html",
+    "precache-manifest.8bbe38173c5e05aa2d5eb25ee2df3722.js": "/vinlotteri/precache-manifest.8bbe38173c5e05aa2d5eb25ee2df3722.js",
+    "service-worker.js": "/vinlotteri/service-worker.js",
+    "static/css/main.821be1c2.chunk.css.map": "/vinlotteri/static/css/main.821be1c2.chunk.css.map",
+    "static/js/2.58f5a0db.chunk.js.LICENSE.txt": "/vinlotteri/static/js/2.58f5a0db.chunk.js.LICENSE.txt",
+    "static/media/logo.png": "/vinlotteri/static/media/logo.f1f6a656.png",
+    "static/media/wine.svg": "/vinlotteri/static/media/wine.2d133cb1.svg"
+  },
+  "entrypoints": [
+    "static/js/runtime-main.cb3ce035.js",
+    "static/js/2.58f5a0db.chunk.js",
+    "static/css/main.821be1c2.chunk.css",
+    "static/js/main.6f670815.chunk.js"
+  ]
+}
