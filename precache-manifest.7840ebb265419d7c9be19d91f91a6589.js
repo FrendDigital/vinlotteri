@@ -1,11 +1,11 @@
 self.__precacheManifest = (self.__precacheManifest || []).concat([
   {
-    "revision": "f2c459bddeb72b395e6b54228fe29f2e",
+    "revision": "358bbd6cf27036d0a653722006e27519",
     "url": "/vinlotteri/index.html"
   },
   {
-    "revision": "59c3d0f7cfd8ad36b607",
-    "url": "/vinlotteri/static/css/main.0dbd2469.chunk.css"
+    "revision": "a36a50eea2f02edd27c3",
+    "url": "/vinlotteri/static/css/main.f5ad67e6.chunk.css"
   },
   {
     "revision": "2d30b52442a6f31914de",
@@ -16,8 +16,8 @@ self.__precacheManifest = (self.__precacheManifest || []).concat([
     "url": "/vinlotteri/static/js/2.f88f1ece.chunk.js.LICENSE.txt"
   },
   {
-    "revision": "59c3d0f7cfd8ad36b607",
-    "url": "/vinlotteri/static/js/main.cf6e8a81.chunk.js"
+    "revision": "a36a50eea2f02edd27c3",
+    "url": "/vinlotteri/static/js/main.327b193d.chunk.js"
   },
   {
     "revision": "1d414fb909e005ce62b0",
