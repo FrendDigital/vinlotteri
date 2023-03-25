@@ -1,6 +1,7 @@
 {
   "name": "vinlotteri",
   "version": "1.0.0",
+  "homepage": "https://FrendDigital.github.io/vinlotteri",
   "description": "React example starter project",
   "keywords": [
     "react",
@@ -10,17 +11,19 @@
   "dependencies": {
     "react": "16.13.1",
     "react-dom": "16.13.1",
-    "react-scripts": "3.4.3",
-    "react-wheel-of-prizes": "1.0.9"
+    "react-scripts": "3.4.3"
   },
   "devDependencies": {
+    "gh-pages": "^5.0.0",
     "typescript": "3.8.3"
   },
   "scripts": {
     "start": "react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom",
-    "eject": "react-scripts eject"
+    "eject": "react-scripts eject",
+    "predeploy": "npm run build",
+    "deploy": "gh-pages -d build"
   },
   "browserslist": [
     ">0.2%",

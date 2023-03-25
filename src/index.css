@@ -1,5 +1,6 @@
 @import url('https://fonts.googleapis.com/css2?family=Questrial&display=swap');
 
+
 body {
   background: #FC5000;
   font-family: 'Questrial', sans-serif;
@@ -8,10 +9,11 @@ body {
 
 * {
   box-sizing: border-box;
+  user-select: none;
 }
 
 h1 {
-  font-size: 22px;
+  font-size: 18px;
   margin: 0;
 }
 
@@ -41,6 +43,7 @@ h1 {
   display: none;
   width: 100%;
   text-align: center;
+  animation: slidein 600ms both;
 }
 
 .screen.active {
@@ -62,6 +65,50 @@ h1 {
   padding: 6px 10px;
   cursor: pointer;
   font-size: 18px;
+  display: flex;
+  gap: 10px;
+}
+
+.frend-picker > span > div {
+  gap: 6px;
+  align-items: center;
+  display: none;
+  background: #fff;
+  border-radius: 5px;
+  padding: 1px 4px;
+  color: #000;
+  font-size: 16px;
+  font-weight: 700;
+  overflow: hidden;
+  animation: slideout 250ms both;
+}
+
+.frend-picker > span.active > div {
+  display: flex;
+}
+
+.frend-picker span.plus,
+.frend-picker span.minus {
+  background: #0B0426;
+  width: 14px;
+  height: 14px;
+  display: block;
+  border-radius: 100%;
+  cursor: pointer;
+  line-height: 12px;
+  color: #fff;
+  text-align: center;
+  font-size: 11x;
+  flex-shrink: 0;
+}
+
+.frend-picker span.plus:hover,
+.frend-picker span.minus:hover {
+  opacity: 0.7;
+}
+
+.frend-picker span.minus {
+  line-height: 14px;
 }
 
 .frend-picker > span:hover {
@@ -75,14 +122,20 @@ h1 {
 
 button {
   background: #0B0426;
-  border-radius: 10px;
-  padding: 14px 20px;
+  border-radius: 50px;
+  padding: 8px 20px;
   color: #fff;
   border: 0;
   font-weight: 700;
   font-size: 18px;
   cursor: pointer;
   border: 2px solid #0B0426;
+  transition: all 300ms;
+  opacity: 1;
+}
+
+button:disabled {
+  opacity: 0.2;
 }
 
 button:hover {
@@ -100,6 +153,7 @@ button:hover {
   width: 100%;
   aspect-ratio: 1;
   position: relative;
+  border: 4px solid #fff;
 }
 
 .wheel span {
@@ -107,10 +161,15 @@ button:hover {
   transform-origin: top left;
   position: absolute;
   width: 50%;
+  font-size: 18px;
+  line-height: 0;
   left: 50%;
   top: 50%;
   color: #fff;
-  font-weight: 700;
+  text-shadow: 0px 0px 10px #000;
+  letter-spacing: 0.1em;
+  text-align: right;
+  padding-right: 24px;
 }
 .wheel .wine {
   position: absolute;
@@ -120,6 +179,31 @@ button:hover {
   left: 50%;
   top: 50%;
   transform: translateY(-50%) translateX(-50%);
-  transition: all 10s;
+  transition: all 10s ease-out;
   cursor: pointer;
+}
+
+.wheel .wine.stop {
+  transition: all 0s ease-out;
+}
+
+@keyframes slidein {
+  from {
+    opacity: 0;
+    transform: translateY(30px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes slideout {
+  from {
+    width: 0;
+  }
+  to {
+    width: 57px;
+  }
 }
