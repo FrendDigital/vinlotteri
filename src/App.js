@@ -1,7 +1,8 @@
-import React, { useState } from "react";
+import React, { useEffect, useState } from "react";
 //import "react-wheel-of-prizes/dist/index.css";
 import logo from './logo.png';
 import wine from './wine.svg';
+import spinningAudio from './audio.mp3';
 
 const frendsSource = [
   'Alex',
@@ -26,13 +27,31 @@ const frendsSource = [
   'Trym',
   'Veronica',
   'Victoria',
+  'Herman',
+  'Sebastian',
 ];
 frendsSource.sort();
 
 const App = () => {
   const [step, setStep] = useState(1);
+  const [rotate, setRotate] = useState(0);
   const [frends, setFrends] = useState({});
   const [start, setStart] = useState(false);
+  const [winner, setWinner] = useState(false);
+
+  useEffect(() => {
+    if(start) {
+      const newRotate = Math.random() * (360 * 10 - 3000) + 3000;
+      setRotate(newRotate);
+      const final = newRotate % 360;
+      for(let i = 0; i < conicPlacement.length; i++) {
+        if(final < conicPlacement[i]) {
+          setWinner(Object.keys(frends)[i]);
+          break;
+        }
+      }
+    }
+  }, [start]);
 
   const colors = [
     '#0B0426',
@@ -46,21 +65,21 @@ const App = () => {
   let tickets = 0;
 
   for (const [key, value] of Object.entries(frends)) {
-    console.log(key);
     tickets += value;
   }
   const slice = 360 / tickets;
   let wheelStyleGradient = 'conic-gradient(';
   let currentPercentage = 0;
   const namePlacement = [];
+  const conicPlacement = [];
   let currentNamePlacement = -90;
   for (const [key, value] of Object.entries(frends)) {
-    console.log(key);
     wheelStyleGradient += colors[color];
     currentPercentage += 100/tickets * value;
     wheelStyleGradient += ' 0 ' + currentPercentage + '%,';
     currentNamePlacement = currentNamePlacement + slice * value;
     namePlacement.push(currentNamePlacement - (slice * value) / 2);
+    conicPlacement.push(currentNamePlacement + 90);
     color++;
 
     if(color > colors.length - 1) {
@@ -69,11 +88,7 @@ const App = () => {
   }
   wheelStyleGradient = wheelStyleGradient.substring(0, wheelStyleGradient.length-1);
   wheelStyleGradient += ')';
-
-  let rotate = 0;
-  if(start) {
-    rotate = Math.random() * (360 * 10 - 3000) + 3000;
-  }
+  
 
   const handleFrends = (frend, add) => {
     const newFrend = {};
@@ -86,6 +101,7 @@ const App = () => {
     } else {
       newFrend[frend] = frends[frend] - 1;
     }
+    console.log(newFrend);
     
     setFrends({
       ...frends,
@@ -117,16 +133,26 @@ const App = () => {
         </div>
         <button onClick={() => setStep(2)} disabled={!Object.keys(frends).length}>Get wined up</button>
         </div>
-        <div className={`wheel-screen screen ${step === 2 ? 'active' : ''}`}>            
+        {winner &&
+          <div className="winner">
+            {winner}!  
+          </div> 
+        }
+        {start &&
+          <audio autoPlay>
+            <source src={spinningAudio} type="audio/mp3"></source>
+          </audio>
+        }
+        <div className={`wheel-screen screen ${step === 2 ? 'active' : ''}`}> 
           <div className="wheel" style={{backgroundImage: wheelStyleGradient}}>
             <img alt="" className={`wine ${start ? 'start' : 'stop'}`} src={wine} onClick={() => {setStart(true)}} style={{transform: 'translateY(-50%) translateX(-50%) rotate('+ rotate +'deg)'}}/>
             {Object.keys(frends).map((frend, key) => 
               <span style={{transform: 'rotate('+namePlacement[key]+'deg)'}}>
-                {frend}
+                {frends[frend] ? frend : ''}
               </span>  
             )}
           </div>
-          <div style={{marginTop: "20px"}} onClick={() => {setStart(false); setStep(1)}}>reset</div>
+          <div style={{marginTop: "20px"}} onClick={() => {setStart(false); setRotate(0); setWinner(false); setStep(1)}}>reset</div>
       </div>
       </div>
     </div>

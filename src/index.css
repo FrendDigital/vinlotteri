@@ -187,6 +187,23 @@ button:hover {
   transition: all 0s ease-out;
 }
 
+.winner {
+  position: absolute;
+  top: 50%;
+  width: 100%;
+  text-align: center;
+  z-index: 99;
+  font-size: 20vw;
+  transform: translateY(-30%);
+  left: 0;
+  color: #fff;
+  text-shadow: 2px 2px 2px rgba(0,0,0,0.5);
+  font-weight: 700;
+  pointer-events: none;
+  animation: expand 600ms both;
+  animation-delay: 10.5s;
+}
+
 @keyframes slidein {
   from {
     opacity: 0;
@@ -205,5 +222,14 @@ button:hover {
   }
   to {
     width: 57px;
+  }
+}
+
+@keyframes expand {
+  from {
+    transform: scale(0);
+  }
+  to {
+    transform: scale(1);
   }
 }
