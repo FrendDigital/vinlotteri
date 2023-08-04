@@ -14,7 +14,7 @@
 importScripts("https://storage.googleapis.com/workbox-cdn/releases/4.3.1/workbox-sw.js");
 
 importScripts(
-  "/vinlotteri/precache-manifest.970f0da1eec5c491020ef71d7fe96d03.js"
+  "/vinlotteri/precache-manifest.f0ff285f49e668617850325ea3f3bc5b.js"
 );
 
 self.addEventListener('message', (event) => {
