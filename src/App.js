@@ -8,7 +8,8 @@ const frendsSource = [
   'Alex',
   'Filip',
   'Poul',
-  'Joacim',
+  'Joakim R',
+  'Joakim F',
   'Celine',
   'Lucas',
   'Arne',
@@ -17,7 +18,6 @@ const frendsSource = [
   'Anette',
   'Christoffer',
   'Dennis',
-  'Elise',
   'Emil',
   'Henrik',
   'Magnus',
@@ -25,10 +25,11 @@ const frendsSource = [
   'Sondre',
   'Stian',
   'Trym',
-  'Veronica',
   'Victoria',
-  'Herman',
-  'Sebastian',
+  'Sebastian A',
+  'Sebastian P',
+  'Sebastian H',
+  'Martin',
 ];
 frendsSource.sort();
 
